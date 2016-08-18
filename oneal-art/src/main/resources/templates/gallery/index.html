@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Oneal-Art: Gallery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Welcome to the Gallery</p>
+    <p><a th:href="@{/}">Home</a></p>
+    
+    
+	<h3>Artists</h3>
+
+	<table>
+		<tr>
+			<th>Name</th>
+		</tr>
+		<tr th:each="artist : ${artists}">
+			<td th:text="${artist.name}">Pablo</td>
+		</tr>
+	</table>
+	
+	<br></br>
+
+	<p>Are you an Admin?  Here is a link to the <a th:href="@{/admin}">Admin</a> section of the site</p>
+</body>
+</html>

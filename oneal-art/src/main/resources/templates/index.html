@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <p th:text="'Hello, ' + ${welcome_message} + '!'" />
+    <p>Please visit our <a th:href="@{/gallery}">Gallery</a></p>
+    <p>Are you an Admin?  Here is a link to the <a th:href="@{/admin}">Admin</a> section of the site</p>
+</body>
+</html>
