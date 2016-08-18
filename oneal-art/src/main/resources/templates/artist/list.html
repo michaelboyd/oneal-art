@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Oneal-Art: Artist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h2>Edit Artists</h2>
+    <p><a th:href="@{/}">Home</a></p>
+    
+    
+	<h3>Artists</h3>
+
+	<table>
+		<tr>
+			<th style="text-align: left;">Name</th>
+		</tr>
+ 		<tr th:each="artist : ${artists}">
+        	<td><a th:href="@{/artist/edit(id=${artist.id})}" th:text="${artist.name}">Name ...</a></td>
+    	</tr>		
+		
+	</table>
+	
+	<p>
+		<a th:href="@{/artist/create}">Add Artist</a>
+	</p>	
+
+</body>
+</html>

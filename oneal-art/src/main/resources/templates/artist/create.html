@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Oneal-Art: Add Artist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h2>Add Artist</h2>
+    <p><a th:href="@{/}">Home</a></p>
+    
+	<form action="#" th:action="@{/artist}" th:object="${artist}" method="post">
+		<div>
+			Artist Name: <input type="text" th:field="*{name}" />
+		</div>
+		<br/>
+		<div>
+			<input type="submit" value="Submit"/>
+		</div>
+    </form>    
+
+</body>
+</html>

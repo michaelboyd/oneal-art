@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Artist {
 
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+//    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
 	
 	@Column(nullable=false)
@@ -31,6 +31,14 @@ public class Artist {
 		this.name = name;
 	}
 
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 	@Override
 	public String toString() {
 		return String.format("Artist [id=%s, name=%s]", id, name);
